@@ -10,6 +10,8 @@ data <- read.table("household_power_consumption.txt", header = TRUE, sep=";" , n
 projectset<- data[data$Date%in% c("1/2/2007" , "2/2/2007"), ]
 #Setting language
 Sys.setlocale(category = "LC_TIME", locale = "C")
+#Determining graphic parameters
+par(mfrow = c(1, 1))
 #drawing plot 1
 hist(projectset$Global_active_power, col= "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", freq = TRUE, xlim = c(0,6), ylim = c(0, 1200))
 #Determining graphic parameters
